@@ -23,3 +23,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/zapisz-zgloszenie', [ZgloszeniaController::class, 'zapiszZgloszenie'])->name('zapisz.zgloszenie');
+
+Route::get('/admin', [ZgloszeniaController::class, 'index']);

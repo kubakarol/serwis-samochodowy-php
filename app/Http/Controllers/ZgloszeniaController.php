@@ -1,11 +1,11 @@
 <?php
 
-// app/Http/Controllers/ZgloszeniaController.php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Zgloszenia;
+
+use Illuminate\Support\Facades\DB;
 
 class ZgloszeniaController extends Controller
 {
@@ -34,10 +34,25 @@ class ZgloszeniaController extends Controller
         return redirect()->back()->with('success', 'Zgłoszenie zostało pomyślnie zapisane.');
     }
 
-    public function wyswietlZgloszenia(){
-    $zgloszenia = Zgloszenia::all();
+    // public function wyswietlZgloszenia(){
+    // $zgloszenia = Zgloszenia::all();
 
-    return view('strona', ['zgloszenia' => $zgloszenia]);
-}
+    // return view('admin', ['zgloszenia' => $zgloszenia]);
+    // }
+    // function index() {
+    //     $data = array(
+    //         'list' => Zgloszenia::table('zgloszenia')->get()
+    //     );
+    //     return view('admin', $data);
+    // }
+    public function index()
+    {
+        $data = [
+            'list' => Zgloszenia::all()
+        ];
+
+        return view('admin', $data);
+    }
+
 }
 

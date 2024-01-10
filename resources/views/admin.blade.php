@@ -1,4 +1,3 @@
-<!-- resources/views/strona.blade.php -->
 
 @extends('layouts.app')
 
@@ -11,9 +10,10 @@
                     <p>Marka pojazdu: {{ $zgloszenie->marka_pojazdu }}</p>
                     <p>Model pojazdu: {{ $zgloszenie->model_pojazdu }}</p>
                     <p>Usterka: {{ $zgloszenie->usterka }}</p>
-                    <!-- Dodaj inne informacje, jeśli są potrzebne -->
+                    
                 </div>
             </div>
         @endforeach
     </div>
 @endsection
+
