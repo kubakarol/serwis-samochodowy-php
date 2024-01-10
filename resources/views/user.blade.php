@@ -9,49 +9,44 @@
                 <div class="card-header">{{ __('Zgłoś naprawę') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('zapisz.zgloszenie') }}">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="Właściciel" class="col-md-4 col-form-label text-md-end">{{ __('Właściciel') }}</label>
+                            <label for="wlasciciel" class="col-md-4 col-form-label text-md-end">{{ __('Właściciel') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Właściciel" type="text" class="form-control " name="Właściciel" required autofocus>
-
-                                
+                                <input id="wlasciciel" type="text" class="form-control " name="wlasciciel" required autofocus>  
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="MarkaPojazdu" class="col-md-4 col-form-label text-md-end">{{ __('Marka pojazdu') }}</label>
+                            <label for="markaPojazdu" class="col-md-4 col-form-label text-md-end">{{ __('Marka pojazdu') }}</label>
 
                             <div class="col-md-6">
-                                <input id="MarkaPojazdu" type="text" class="form-control"  value required  autofocus onkeydown="return /[a-z]/i.test(event.key)">
-
-                               
+                                <input id="markaPojazdu" type="text" class="form-control" name="markaPojazdu" value required  autofocus onkeydown="return /[a-z]/i.test(event.key)">   
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="ModelPojazdu" class="col-md-4 col-form-label text-md-end">{{ __('Model Pojazdu') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="ModelPojazdu" type="text" class="form-control " name="ModelPojazdu" required autofocus>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="Usterka" class="col-md-4 col-form-label text-md-end">{{ __('Usterka') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="Usterka" type="text" class="form-control " name="Usterka" required autofocus>
-
-                                
-                            </div>
-                        </div>
-
                         
+                        <div class="row mb-3">
+                            <label for="modelPojazdu" class="col-md-4 col-form-label text-md-end">{{ __('Model Pojazdu') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="modelPojazdu" type="text" class="form-control " name="modelPojazdu" required autofocus>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="usterka" class="col-md-4 col-form-label text-md-end">{{ __('Usterka') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usterka" type="text" class="form-control " name="usterka" required autofocus>
+
+                                
+                            </div>
+                        </div>
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
