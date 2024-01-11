@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ZgloszeniaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ChuckController;
 
 
 /*
@@ -36,4 +37,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/zapisz-zgloszenie', [ZgloszeniaController::class, 'zapiszZgloszenie'])->name('zapisz.zgloszenie');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+
+//Route::get('/', [ChuckController::class, 'getRandomJoke'])->name('chuck.getRadnomJoke');
 
