@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ZgloszeniaController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +21,19 @@ Route::get('/', function () {
     return view('strona');
 });
 
+Route::get('admin', function () {
+    return view('admin');
+});
+
+Route::get('user', function () {
+    return view('user');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/zapisz-zgloszenie', [ZgloszeniaController::class, 'zapiszZgloszenie'])->name('zapisz.zgloszenie');
 
-Route::get('/admin', [ZgloszeniaController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+

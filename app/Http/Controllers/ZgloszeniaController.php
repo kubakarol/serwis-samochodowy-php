@@ -33,5 +33,8 @@ class ZgloszeniaController extends Controller
 
         return redirect()->back()->with('success', 'Zgłoszenie zostało pomyślnie zapisane.');
     }
+
+   
+
 }
 

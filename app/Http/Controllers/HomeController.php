@@ -21,9 +21,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-//    zwracanie widoku w zaleznosci od rodzaju konta 0 =user, 1=admin
+//    zwracanie widoku w zaleznosci od rodzaju konta 0=user, 1=admin
         public function index()
-    {
+        {
         if(Auth::id()){
             $konto = Auth()->user()->konto;
             if($konto==0){
@@ -37,6 +37,6 @@ class HomeController extends Controller
             }
             }
 
-    }
+        }
     
 }
