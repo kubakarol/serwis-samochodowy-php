@@ -10,9 +10,12 @@ class AdminController extends Controller
 {
     public function index()
     {
-        
         $zgloszenie = Zgloszenia::all();
         return view('admin', compact('zgloszenie'));
+    }
+    public function __construct()
+    {
+        $this->middleware(['auth', 'isadmin']);
     }
 
 }

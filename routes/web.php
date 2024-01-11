@@ -21,13 +21,13 @@ Route::get('/', function () {
     return view('strona');
 });
 
-Route::get('admin', function () {
+Route::get('admin', ['middleware'=>'auth', function () {
     return view('admin');
-});
+}]);
 
-Route::get('user', function () {
+Route::get('user',['middleware'=>'auth', function () {
     return view('user');
-});
+}]);
 
 Auth::routes();
 
